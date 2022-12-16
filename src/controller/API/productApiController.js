@@ -13,7 +13,7 @@ const getPagination = (page, size) => {
 
 const getDataPagination = (productsRow, types, sizes, categories, fees, page, limit) =>{
     /* let {count: total, rows: products} = productsRow */
-    let total = productsRow.count 
+    let total = productsRow.count / 2
     let rows = productsRow.rows
     let currentPage = page ? Number(page) : 0
     const totalPages = Math.ceil(total / limit) 
