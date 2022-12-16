@@ -119,7 +119,7 @@ const productApiController = {
 
 	list: async  (req, res) => {
 
-        const  include = ['Type', 'Size', 'Category', /* 'Images', */ 'Fee']
+        const  include = ['Type', 'Size', 'Category', 'Images', 'Fee']
 
         let meta={status:'success', length:0}
 
@@ -142,7 +142,7 @@ const productApiController = {
                  data.push({
                     product,
                     url: `${process.env.HOST}/products/detail/${product.id}`,
-                    /* urlImg: `${process.env.HOST}/images/${product.Images[0].name}` */
+                    urlImg: `${process.env.HOST}/images/${product.Images[0].name}`
                 })
             })
             
